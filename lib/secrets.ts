@@ -5,6 +5,8 @@ const CACHE_TTL_MS = 5 * 60 * 1000;
 const cache = new Map<string, { value: string; expiresAt: number }>();
 
 export type SecretKey =
+  | "PAGOUAI_SECRET_KEY"
+  | "PAGOUAI_API_URL"
   | "PAGOU_SECRET_KEY"
   | "PAGOU_PUBLIC_KEY"
   | "PAGOU_API_URL"
