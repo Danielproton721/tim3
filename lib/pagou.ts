@@ -211,7 +211,7 @@ export interface PagouTransaction {
 // ============================================================
 
 async function buildAuthHeader(): Promise<string> {
-  const secret = await getSecret("PAGOU_SECRET_KEY");
+  const secret = await getSecret("PAGOUAI_SECRET_KEY");
   const token = Buffer.from(`${secret}:x`).toString("base64");
   return `Basic ${token}`;
 }
