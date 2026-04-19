@@ -91,7 +91,7 @@ export default function RecargaStep1() {
           >
             <div className="flex flex-col items-center">
                 <Image
-                  src="/logo-tim-oficial.png"
+                  src="/imgi_1_logo-tim-R4m9PIUL.png"
                   alt="TIM"
                   width={140}
                   height={60}
@@ -169,7 +169,7 @@ export default function RecargaStep1() {
 
             <div className="mt-4 flex justify-center">
               <Image
-                src="/whatsapp-real.png"
+                src="/imgi_2_tim-pre-xip-promo-Ck4FnecT.png"
                 alt="Duas clientes TIM comemorando recarga com WhatsApp liberado"
                 width={320}
                 height={336}

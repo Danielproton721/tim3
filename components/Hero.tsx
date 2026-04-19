@@ -49,7 +49,7 @@ export default function Hero() {
             <div className="relative w-full max-w-[500px]">
               <div className="animate-float">
                 <Image
-                  src="/mulher-real.png"
+                  src="/imgi_2_tim-woman-blue-HnyGBksu.png"
                   alt="Mulher segurando celular comemorando recarga"
                   width={500}
                   height={583}

@@ -63,7 +63,7 @@ export default function Header() {
             {/* Mobile: icon + TIM | Desktop: logo completo */}
             <span className="flex items-center md:hidden">
               <Image
-                src="/logo-tim-oficial.png"
+                src="/imgi_1_logo-tim-R4m9PIUL.png"
                 alt="TIM"
                 width={80}
                 height={40}
@@ -72,7 +72,7 @@ export default function Header() {
               />
             </span>
             <Image
-              src="/logo-tim-oficial.png"
+              src="/imgi_1_logo-tim-R4m9PIUL.png"
               alt="TIM"
               width={100}
               height={40}
