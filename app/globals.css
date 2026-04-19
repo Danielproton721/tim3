@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tim-blue-primary: #0029ff;
+  --tim-blue-dark: #001fcc;
+  --tim-blue-light: #3355ff;
+  --tim-blue-card: #1540e5;
+  --tim-blue-topbar: #0020d9;
+  --tim-red: #ec1b2e;
+  --tim-yellow: #ffc800;
+  --tim-yellow-dark: #e6b300;
+  --tim-yellow-badge: #ffd500;
+  --tim-green: #00c853;
+  --tim-green-dark: #00a846;
+  --gray-text: #6b7280;
+  --gray-bg: #f9fafb;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: #ffffff;
+  color: #1f2937;
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+/* Remover setinhas do input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Scrollbar discreta */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 41, 255, 0.25);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 41, 255, 0.45);
+}
+
+/* Focus ring global acessível */
+:focus-visible {
+  outline: 2px solid #ffc800;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Utilitários custom */
+.bg-blue-gradient {
+  background: linear-gradient(180deg, #0029ff 0%, #0024dc 100%);
+}

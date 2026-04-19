@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" fill="none">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="55%" r="40%">
+      <stop offset="0%" stop-color="#FFD500" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#00C2FF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0029FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="jacket" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2B6BE0"/>
+      <stop offset="100%" stop-color="#1A4BB5"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A0A05"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <linearGradient id="phone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Glow atrás -->
+  <ellipse cx="300" cy="380" rx="260" ry="280" fill="url(#glow)"/>
+
+  <!-- Moedas amarelas flutuando -->
+  <circle cx="120" cy="180" r="16" fill="#FFD500"/>
+  <circle cx="120" cy="180" r="16" fill="#F5B800" opacity="0.4"/>
+  <circle cx="95" cy="240" r="10" fill="#FFD500"/>
+  <circle cx="480" cy="160" r="18" fill="#FFD500"/>
+  <circle cx="500" cy="320" r="12" fill="#FFD500"/>
+  <circle cx="150" cy="420" r="14" fill="#FFD500"/>
+  <circle cx="520" cy="480" r="16" fill="#FFD500"/>
+  <circle cx="80" cy="350" r="8" fill="#FFD500"/>
+
+  <!-- Brilho de fagulhas -->
+  <g fill="#FFFFFF" opacity="0.9">
+    <circle cx="200" cy="140" r="3"/>
+    <circle cx="440" cy="220" r="4"/>
+    <circle cx="180" cy="500" r="3"/>
+    <circle cx="460" cy="400" r="2"/>
+  </g>
+
+  <!-- Cabelo traseiro (volume) -->
+  <path d="M180 280 Q160 380 170 500 Q185 600 230 640 L370 640 Q415 600 430 500 Q440 380 420 280 Z" fill="url(#hair)"/>
+
+  <!-- Pescoço -->
+  <path d="M275 330 L275 380 Q300 395 325 380 L325 330 Z" fill="#8B5A3C"/>
+
+  <!-- Corpo / jaqueta azul -->
+  <path d="M180 400 Q170 500 180 620 L420 620 Q430 500 420 400 Q380 370 340 365 L260 365 Q220 370 180 400 Z" fill="url(#jacket)"/>
+
+  <!-- Gola da jaqueta -->
+  <path d="M250 365 L300 410 L350 365 L340 430 L300 450 L260 430 Z" fill="#1A4BB5"/>
+
+  <!-- Braço direito segurando celular -->
+  <path d="M350 420 Q400 450 410 510 Q415 540 395 560 L355 540 Q345 500 340 470 Z" fill="url(#jacket)"/>
+
+  <!-- Braço esquerdo -->
+  <path d="M200 430 Q170 480 185 550 L220 545 Q230 490 235 450 Z" fill="url(#jacket)"/>
+
+  <!-- Mão direita -->
+  <path d="M360 530 Q380 540 395 560 Q390 580 370 580 Q355 570 350 550 Z" fill="#8B5A3C"/>
+
+  <!-- Celular -->
+  <rect x="330" y="480" width="70" height="120" rx="10" fill="url(#phone)" transform="rotate(-15 365 540)"/>
+  <rect x="338" y="488" width="54" height="100" rx="4" fill="#00A4FF" transform="rotate(-15 365 540)" opacity="0.85"/>
+
+  <!-- Rosto -->
+  <ellipse cx="300" cy="260" rx="85" ry="95" fill="#8B5A3C"/>
+
+  <!-- Sombreamento do rosto -->
+  <path d="M220 240 Q220 330 260 350 L340 350 Q380 330 380 240 Q380 180 300 175 Q220 180 220 240 Z" fill="#A06B48" opacity="0.3"/>
+
+  <!-- Cabelo frontal -->
+  <path d="M215 210 Q220 160 280 150 Q340 145 385 175 Q395 210 390 240 L380 220 Q350 200 300 200 Q250 200 220 230 Z" fill="url(#hair)"/>
+
+  <!-- Cabelo lateral esquerdo caindo -->
+  <path d="M215 210 Q200 280 205 400 Q210 460 195 490 L180 450 Q175 350 185 280 Q195 230 215 210 Z" fill="url(#hair)"/>
+
+  <!-- Cabelo lateral direito caindo -->
+  <path d="M385 210 Q400 280 395 400 Q390 460 405 490 L420 450 Q425 350 415 280 Q405 230 385 210 Z" fill="url(#hair)"/>
+
+  <!-- Sobrancelhas -->
+  <path d="M240 230 Q255 225 275 230" stroke="#1A0A05" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M325 230 Q345 225 360 230" stroke="#1A0A05" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Olhos (surpresos/felizes) -->
+  <ellipse cx="258" cy="255" rx="8" ry="10" fill="#FFFFFF"/>
+  <ellipse cx="342" cy="255" rx="8" ry="10" fill="#FFFFFF"/>
+  <circle cx="258" cy="256" r="5" fill="#1A0A05"/>
+  <circle cx="342" cy="256" r="5" fill="#1A0A05"/>
+  <circle cx="260" cy="254" r="1.5" fill="#FFFFFF"/>
+  <circle cx="344" cy="254" r="1.5" fill="#FFFFFF"/>
+
+  <!-- Nariz -->
+  <path d="M298 270 Q295 290 300 300 Q305 298 305 290" stroke="#6B4530" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Boca aberta sorrindo (expressão de surpresa positiva) -->
+  <ellipse cx="300" cy="320" rx="18" ry="14" fill="#3A1A1A"/>
+  <ellipse cx="300" cy="325" rx="14" ry="8" fill="#8B2A3A"/>
+  <path d="M290 316 L310 316" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Blush -->
+  <ellipse cx="240" cy="295" rx="14" ry="8" fill="#D4715A" opacity="0.4"/>
+  <ellipse cx="360" cy="295" rx="14" ry="8" fill="#D4715A" opacity="0.4"/>
+</svg>
