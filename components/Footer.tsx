@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <Link href="/" aria-label="Início">
               <Image
-                src="/logo-tim-recarga.svg"
+                src="/imgi_1_logo-tim-R4m9PIUL.png"
                 alt="TIM Recarga"
                 width={160}
                 height={32}

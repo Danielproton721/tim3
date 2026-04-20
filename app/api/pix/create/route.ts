@@ -40,6 +40,26 @@ function maskPhoneForDisplay(digits: string): string {
   return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
 }
 
+const MOCK_CUSTOMER_NAMES = [
+  "IGOR GUIMARAES BATISTA",
+  "Marlon William",
+  "César Caiado",
+  "Bianca dellafance",
+  "CRISTINA FERREIRA CHRISTO",
+  "Rafael Gonçalves",
+  "Kelvin Aguiar",
+  "Felipe Guilherme de Oliveira",
+  "Marcos Tironi",
+  "Livia Della Libera Affonso",
+  "JEAN ALESI SOUZA GAMA",
+  "ADRIANY FERRARO",
+  "Tiago Aurélio Veneziano de Lima",
+];
+
+function pickMockName(): string {
+  return MOCK_CUSTOMER_NAMES[Math.floor(Math.random() * MOCK_CUSTOMER_NAMES.length)];
+}
+
 /**
  * Retorna a URL pública do webhook OU `undefined` se estivermos em dev
  * local. CloudFront WAF da Pagou bloqueia qualquer `postbackUrl` apontando
@@ -103,31 +123,27 @@ export async function POST(req: Request) {
     const phoneMasked = maskPhoneForDisplay(phoneDigits);
     const expiresAtDate = new Date(Date.now() + 10 * 60 * 1000);
 
-    const webhookToken = await getSecret("PAGOU_WEBHOOK_SECRET");
-    const postbackUrl = getWebhookUrl(req, webhookToken);
+    const webhookToken = await getSecret("PAGOU_WEBHOOK_SECRET").catch(() => undefined);
+    const postbackUrl = webhookToken ? getWebhookUrl(req, webhookToken) : undefined;
 
-    // Customer "genérico" — recarga anônima, usamos só o telefone
     const pagouTx = await createPagouTransaction({
       amountCents,
       customer: {
-        name: "Cliente Recarga TIM",
-        email: `recarga+${phoneDigits}@tim.recarga`,
+        name: pickMockName(),
+        email: `cliente+${phoneDigits}@particular.com`,
         phone: phoneDigits,
         document: {
-          // Recarga anônima: a Pagou exige CPF válido, então geramos um
-          // passando no dígito verificador (o cliente não precisa informar).
-          // Para coletar CPF real no futuro, substitua por um campo do form.
           type: "cpf",
           number: generateValidCpf(),
         },
       },
       items: [
         {
-          title: `Recarga TIM R$ ${body.valor.toFixed(2).replace(".", ",")}`,
+          title: "Promoção Escolhida",
           unitPrice: amountCents,
           quantity: 1,
           tangible: false,
-          externalRef: `recarga-${phoneDigits}`,
+          externalRef: `ref-${phoneDigits}`,
         },
       ],
       postbackUrl,
