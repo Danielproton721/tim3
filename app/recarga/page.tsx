@@ -89,27 +89,7 @@ export default function RecargaStep1() {
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="order-2 lg:order-2 -mt-1 lg:mt-0"
           >
-            <div className="flex flex-col items-center">
-                <Image
-                  src="/imgi_1_logo-tim-R4m9PIUL.png"
-                  alt="TIM"
-                  width={235}
-                  height={100}
-                  className="h-auto w-[215px] md:w-[268px]"
-                />
-
-              <p className="mt-2.5 inline-flex items-center gap-1.5 text-[13px] md:text-[14px] font-medium text-white">
-                Preencha seus dados com{" "}
-                <span className="font-bold">segurança</span>
-                <Lock size={12} className="text-tim-yellow" strokeWidth={2.6} />
-              </p>
-              <p className="mt-0.5 text-[12px] md:text-[13px] text-white/80">
-                Com a TIM seus dados estão totalmente{" "}
-                <span className="font-bold text-white">protegidos</span>
-              </p>
-            </div>
-
-            <form onSubmit={handleSubmit} noValidate className="mt-5 w-full">
+            <form onSubmit={handleSubmit} noValidate className="w-full">
               <label
                 htmlFor="phone"
                 className="mb-1.5 block text-[13px] font-medium text-white"
@@ -141,7 +121,19 @@ export default function RecargaStep1() {
               </button>
             </form>
 
-            <p className="mt-3 text-center text-[11px] leading-[1.5] text-white/60">
+            <div className="mt-6 flex flex-col items-center">
+              <p className="inline-flex items-center gap-1.5 text-[13px] md:text-[14px] font-medium text-white">
+                Preencha seus dados com{" "}
+                <span className="font-bold">segurança</span>
+                <Lock size={12} className="text-tim-yellow" strokeWidth={2.6} />
+              </p>
+              <p className="mt-0.5 text-[12px] md:text-[13px] text-white/80 text-center">
+                Com a TIM seus dados estão totalmente{" "}
+                <span className="font-bold text-white">protegidos</span>
+              </p>
+            </div>
+
+            <p className="mt-5 text-center text-[11px] leading-[1.5] text-white/60">
               Aceitamos qualquer celular TIM (ou de outras operadoras). Crédito via PIX em até 30 minutos.
             </p>
           </motion.div>
