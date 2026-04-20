@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Search, Menu, X } from "lucide-react";
+import { Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -81,43 +81,28 @@ export default function Header() {
             />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className={cn(
-                  "relative text-[15px] font-semibold text-white transition-opacity hover:opacity-80",
-                  isActiveNav(link.href) &&
-                    "after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-white"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 md:gap-4">
             <button
               type="button"
-              aria-label="Buscar"
-              className="hidden md:inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10"
+              aria-label="Minha conta"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10"
             >
-              <Search size={22} strokeWidth={2.2} />
+              <User size={22} strokeWidth={2.2} />
             </button>
             <button
               type="button"
               aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 md:hidden"
+              className="inline-flex flex-col items-center justify-center gap-0.5 rounded-lg px-2 py-1 text-white transition-colors hover:bg-white/10"
               onClick={() => setMobileOpen((v) => !v)}
             >
-              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+              {mobileOpen ? <X size={22} strokeWidth={2.2} /> : <Menu size={22} strokeWidth={2.2} />}
+              <span className="text-[11px] font-medium leading-none">Menu</span>
             </button>
           </div>
         </div>
 
         {mobileOpen && (
-          <div className="border-t border-white/10 bg-tim-blue-primary md:hidden">
+          <div className="border-t border-white/10 bg-tim-blue-primary">
             <div className="mx-auto max-w-[1280px] px-6 py-4">
               <ul className="flex flex-col gap-2">
                 {NAV_LINKS.map((link) => (
