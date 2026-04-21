@@ -18,7 +18,13 @@ const PhoneInput = forwardRef<HTMLInputElement, PhoneInputProps>(
           ref={ref}
           type="tel"
           inputMode="numeric"
-          autoComplete="tel-national"
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck={false}
+          data-form-type="other"
+          data-lpignore="true"
+          data-1p-ignore="true"
           placeholder="(00) 00000-0000"
           value={value}
           onChange={(e) => onChange(maskPhone(e.target.value))}
