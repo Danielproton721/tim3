@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <Script id="utmify-pixel-google" strategy="afterInteractive">
           {`
-            window.googlePixelId = "69e6c9e0e27a5e27ed403026";
+            window.googlePixelId = "69e7d509f3a6593b09503c84";
             var a = document.createElement("script");
             a.setAttribute("async", "");
             a.setAttribute("defer", "");
