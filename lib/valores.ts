@@ -6,15 +6,16 @@ export interface ValorOption {
 }
 
 export const VALORES_RECARGA: ValorOption[] = [
-  { valor: 20.0, bonus: "+3GB", gb: 3 },
-  { valor: 24.9, bonus: "+5GB", gb: 5 },
-  { valor: 29.9, bonus: "+8GB", gb: 8 },
-  { valor: 34.9, bonus: "+10GB", gb: 10 },
-  { valor: 39.9, bonus: "+12GB", gb: 12 },
-  { valor: 44.9, bonus: "+15GB", gb: 15 },
-  { valor: 49.9, bonus: "+20GB", gb: 20, destaque: true },
-  { valor: 69.9, bonus: "+30GB", gb: 30 },
-  { valor: 99.9, bonus: "+50GB", gb: 50 },
+  { valor: 15, bonus: "", gb: 0 },
+  { valor: 20, bonus: "+1GB", gb: 1 },
+  { valor: 30, bonus: "+2GB", gb: 2, destaque: true },
+  { valor: 40, bonus: "+3GB", gb: 3 },
+  { valor: 50, bonus: "+5GB", gb: 5 },
+  { valor: 60, bonus: "+5,5GB", gb: 5.5 },
+  { valor: 70, bonus: "+6GB", gb: 6 },
+  { valor: 80, bonus: "+7GB", gb: 7 },
+  { valor: 90, bonus: "+8GB", gb: 8 },
+  { valor: 100, bonus: "ILIMITADO", gb: 999 },
 ];
 
 export const VALOR_PADRAO: ValorOption = VALORES_RECARGA.find((v) => v.destaque) ?? VALORES_RECARGA[0];
