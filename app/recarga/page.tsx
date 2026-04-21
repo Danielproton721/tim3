@@ -18,9 +18,9 @@ import {
 
 export default function RecargaStep1() {
   const router = useRouter();
-  const { phoneFormatted, setPhone } = useRechargeStore();
+  const { setPhone } = useRechargeStore();
 
-  const [phone, setLocalPhone] = useState<string>(phoneFormatted ?? "");
+  const [phone, setLocalPhone] = useState<string>("");
   const [error, setError] = useState<string | undefined>();
   const [submitting, setSubmitting] = useState(false);
 
