@@ -55,25 +55,15 @@ export default function ValorCard({
         R$
       </span>
 
-      {/* Número + centavos sempre em superscript */}
-      <div className="mt-0.5 flex items-baseline leading-none">
-        <span
-          className={cn(
-            "font-black leading-none text-[20px] sm:text-[24px] md:text-[26px]",
-            selected ? "text-[#0B0F19]" : "text-white"
-          )}
-        >
-          {reais}
-        </span>
-        <sup
-          className={cn(
-            "ml-[2px] text-[10px] sm:text-[12px] font-black leading-none relative top-[-0.55em]",
-            selected ? "text-[#0B0F19]" : "text-white"
-          )}
-        >
-          {centavos}
-        </sup>
-      </div>
+      {/* Número (sem centavos) */}
+      <span
+        className={cn(
+          "mt-0.5 font-black leading-none text-[22px] sm:text-[26px] md:text-[28px]",
+          selected ? "text-[#0B0F19]" : "text-white"
+        )}
+      >
+        {reais}
+      </span>
 
       {/* Bônus */}
       <span
