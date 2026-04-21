@@ -51,6 +51,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'AW-17766226464');
           `}
         </Script>
+        <Script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          strategy="afterInteractive"
+          data-utmify-prevent-xcod-sck=""
+          data-utmify-prevent-subids=""
+        />
+        <Script id="utmify-pixel-google" strategy="afterInteractive">
+          {`
+            window.googlePixelId = "69e6c9e0e27a5e27ed403026";
+            var a = document.createElement("script");
+            a.setAttribute("async", "");
+            a.setAttribute("defer", "");
+            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
+            document.head.appendChild(a);
+          `}
+        </Script>
       </head>
       <body className="flex min-h-screen flex-col">
         <Header />
